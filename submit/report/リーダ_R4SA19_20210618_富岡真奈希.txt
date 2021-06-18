@@ -1,0 +1,71 @@
+[HTML]
+<body onload="showQuestion()">
+    <h1 id="title">Question</h1>
+    <div id="question"></div>
+    <div id="answerForm">
+            <input type="text" id="answer" placeholder="英単語を入力">
+            <button onclick="judge()">OK</button>
+    </div>
+    <p id="resultMessage"></p>
+    <img id="resultImage" src="">
+</body>
+
+
+
+[CSS]
+body {
+    text-align: center; 
+}
+h1 {
+    color: #979797;
+}
+#question {
+    width: 100%;
+    margin: 40px 0;
+    font-size: 60px;
+}
+#answerForm {
+    font-size: 20px;
+}
+#answer {
+    width: 60%;
+}
+
+[JavaScript側(ひな形)]
+// 問題番号
+var no = 0;
+// 正解数
+var score = 0;
+// ここは日本人が覚えるのが苦手な単語を書く
+var wordList = [
+    {
+        japanese: "電話",
+        english: "Phone"
+    },
+    {
+        japanese: "歴史",
+        english: "History"
+    },
+    {
+        japanese: "社会",
+        english: "Society"
+    },
+    {
+        japanese: "世代",
+        english: "Generation"
+    },
+    {
+        japanese: "知識",
+        english: "Knowledge"
+    }
+];
+
+// 問題を表示する
+function showQuestion() {
+}
+
+// 入力された回答の正誤判定を行う
+function judge() {
+}
+
+
