@@ -1,0 +1,104 @@
+[HTML]
+<body onload="showQuestion()">
+    <h1 id="title">Question</h1>
+    <div id="question"></div>
+    <div id="answerForm">
+            <input type="text" id="answer" placeholder="英単語を入力">
+            <button onclick="judge()">OK</button>
+    </div>
+    <p id="resultMessage"></p>
+    <img id="resultImage" src="">
+</body>
+
+
+
+[CSS]
+body {
+    text-align: center; 
+}
+h1 {
+    color: #979797;
+}
+#question {
+    width: 100%;
+    margin: 40px 0;
+    font-size: 60px;
+}
+#answerForm {
+    font-size: 20px;
+}
+#answer {
+    width: 60%;
+}
+
+[JavaScript側(ひな形)]
+// 問題番号
+var no = 0;
+// 正解数
+var score = 0;
+// ここは日本人が覚えるのが苦手な単語を書く
+var wordList = [
+    {
+        japanese: "cautious",
+        english: "慎重な"
+    },
+    {
+        japanese: "push for",
+        english: "～を得ようと努める"
+    },
+    {
+        japanese: "live up to",
+        english: "～に応える"
+    },
+    {
+        japanese: "closely",
+        english: "厳密に"
+    },
+    {
+        japanese: "知識",
+        english: "Knowledge"
+    }
+];
+
+// 問題を表示する
+function showQuestion() {
+}
+
+// 入力された回答の正誤判定を行う
+function judge() {
+}
+
+
+showQuestion 関数の中
+
+// 問題を表示する
+function showQuestion() {
+    if(no < wordList.length) {
+    // 次の問題がある場合は、表示する
+        document.getElementById("question").innerHTML = wordList[no].japanese;
+    } else {
+        // 全問終了したら、成績を発表する
+        document.getElementById("question").innerHTML = score + "/" + wordList.length;
+        document.getElementById("answerForm").style.display = "none";
+        if(score == wordList.length) {
+            // 全問正解の場合
+            document.getElementById("resultMessage").innerHTML = "全問正解！よくできました！ ";
+            document.getElementById("resultImage").src = "gold.png";
+        } else if(score >= wordList.length * 0.6) {
+            // 6 割以上正解の場合
+            document.getElementById("resultMessage").innerHTML = "惜しい！あともう一歩でした！";
+            document.getElementById("resultImage").src = "silver.png";
+        } else {
+            // 6 割未満の場合
+            document.getElementById("resultMessage").innerHTML = "もう少しがんばりましょう。";
+            document.getElementById("resultImage").src = "bronze.png";
+        }
+    }
+}
+
+
+
+
+
+
+
