@@ -1,0 +1,16 @@
+// 保存
+  const json = JSON.stringify(questions, undefined, 1);
+  localStorage.setItem('questions', json);
+  console.log(questions);
+
+//問題ランダム表示
+question = questions[Math.floor(Math.random() * questions.length)];
+document.getElementById('sample').innerHTML = question['english'];
+
+//データ取得　カウント
+question['date'] = getNow();
+question['count'] = question['count'] + 1;
+
+//問題表示
+document.getElementById('sample').innerHTML = question['english'];
+
