@@ -40,7 +40,6 @@ function create() {
     questions.push(create_question("burial", "埋葬"));
     questions.push(create_question("care", "世話"));
     questions.push(create_question("celebration", "祝賀"));
-    questions.push(create_question("celebration", "式"));
     questions.push(create_question("chore", "雑用"));
     questions.push(create_question("cleaning", "掃除"));
     questions.push(create_question("communication", "伝達"));
@@ -54,8 +53,18 @@ function create() {
 }
 //問題表示
 function show(){
-  question = questions[Math.floor(Math.random() * questions.length)];
-  document.getElementById('sample').innerHTML = question['english'];
+  for(let i = 0; i < questions.length ; i ++){
+    question = questions[i];
+
+    if(question['count'] == null ){
+      
+    }else{
+      document.getElementById('sample').innerHTML = question['english'];
+
+    }
+
+  }
+ 
 }
 
 //結果の条件分岐の処理
