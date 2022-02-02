@@ -1,0 +1,75 @@
+.content{
+    width: 200px;
+    height: 150px;
+    border : 1px solid #000;
+    position: relative; /*相対位置*/
+}
+
+p{
+    /*文字の装飾*/
+    color: rgb(8, 8, 8);
+    font-size : 30px;
+    font-weight: bold;
+    text-align: center;
+}
+.bg{
+    /*位置の設定*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /*背景画像の設定*/
+    background: url(file:///C:/Users/%E5%AF%8C%E5%B2%A1%E7%9C%9F%E5%A5%88%E5%B8%8C/Desktop/k%E3%83%81%E3%83%BC%E3%83%A0/yara.jpg);
+    background-size: cover;
+    
+
+    /*透過の設定*/
+    opacity: 0.5;
+}
+p1{
+    width: 100%; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
+    height: 1.5em;
+    color: rgb(26, 46, 46);
+    font-size : 60px;
+    font-weight: bold;
+    text-align: center;
+
+    /*位置の設定 - 上下中央寄せ*/
+    position: absolute;
+    margin: auto;
+    top: -400;
+    bottom: 0;
+}
+
+p2{
+    width: 100%; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
+    height: 1.5em;
+    color: rgb(14, 13, 13);
+    font-size : 30px;
+    font-weight: bold;
+    text-align: center;
+
+    /*位置の設定 - 上下中央寄せ*/
+    position: absolute;
+    margin: auto;
+    top: 200;
+    bottom: 0;
+}
+p3{
+    width: 100%; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
+    height: 1.5em;
+    color: rgb(14, 13, 13);
+    font-size :40px;
+    font-weight: bold;
+    text-align: center;
+
+    /*位置の設定 - 上下中央寄せ*/
+    position: absolute;
+    margin: auto;
+    top: -20;
+    bottom: 0;
+}
+
+.resizeimage img { width: 100%; }
